@@ -23,17 +23,37 @@ public class Calendar {
 		Scanner scanner=new Scanner(System.in);
 		Calendar cal=new Calendar();
 		
+		String PROMPT="cal> ";
 		System.out.println("Type number of repeat.");
-		int repeat=scanner.nextInt();
+
+		//int repeat=scanner.nextInt();
 		
-		for (int i=0; i<repeat;i++) {
+		int month=1;
+		while(true) {
 			System.out.println("Type month");
-			int month=scanner.nextInt();
-			
+			System.out.print(PROMPT);
+			month=scanner.nextInt();
 			//int[] maxDays
+			if(month<1 || month>12) {
+				System.out.println("Month is out of bound."+ month);		
+				break;
+			}
 			
 			System.out.printf("Month %d has maximum %d days. \n", month, cal.maxDaysOfMonth(month) );
+
 		}
+		
+		
+//		for (int i=0; i<repeat;i++) {
+//			System.out.println("Type month");
+//			System.out.print(PROMPT);
+//
+//			int month=scanner.nextInt();
+//			
+//			//int[] maxDays
+//			
+//			System.out.printf("Month %d has maximum %d days. \n", month, cal.maxDaysOfMonth(month) );
+//		}
 		
 		System.out.println("Bye~~~~");
 //		System.out.println("Type month");
