@@ -22,12 +22,26 @@ public class Calendar {
 		//Find maximum dates of month.
 		Scanner scanner=new Scanner(System.in);
 		Calendar cal=new Calendar();
-		System.out.println("Type month");
-		int month=scanner.nextInt();
 		
-		//int[] maxDays
+		System.out.println("Type number of repeat.");
+		int repeat=scanner.nextInt();
 		
-		System.out.printf("Month %d has maximum %d days", month, cal.maxDaysOfMonth(month) );
+		for (int i=0; i<repeat;i++) {
+			System.out.println("Type month");
+			int month=scanner.nextInt();
+			
+			//int[] maxDays
+			
+			System.out.printf("Month %d has maximum %d days. \n", month, cal.maxDaysOfMonth(month) );
+		}
+		
+		System.out.println("Bye~~~~");
+//		System.out.println("Type month");
+//		int month=scanner.nextInt();
+//		
+//		//int[] maxDays
+//		
+//		System.out.printf("Month %d has maximum %d days", month, cal.maxDaysOfMonth(month) );
 		scanner.close();
 
 	}
